@@ -1,21 +1,4 @@
-@import "./button.css";
-@import "./color-select.css";
-@import "./dialog.css";
-@import "./event-details.css";
-@import "./event-list.css";
-@import "./event.css";
-@import "./fab.css";
-@import "./form.css";
-@import "./input.css";
-@import "./mini-calendar.css";
-@import "./nav.css";
-@import "./month-calendar.css";
-@import "./scroll.css";
-@import "./select.css";
-@import "./sidebar.css";
-@import "./toaster.css";
-@import "./week-calendar.css";
-@import "./responsive.css";
+@import "/styles/button.css";
 
 * {
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -24,31 +7,67 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-text-dark);
-}
-
-.app {
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: var(--color-gray-100);
 }
 
-.main {
+.login-container {
+  text-align: center;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-lg);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  gap: 1rem;
 }
 
-.calendar {
-  height: 100%;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-@media (min-width: 768px) {
-  .app {
-    display: grid;
-    grid-template-columns: auto 1fr;
-  }
+.form-label {
+  font-size: var(--font-size-sm);
+}
+
+.form-input {
+  font-size: var(--font-size-md);
+  padding: 0.5rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+}
+
+.login-button {
+  width: 100%;
+}
+
+.login-footer {
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: var(--color-blue-600);
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
 }
 
 :root {

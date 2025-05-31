@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHAT</title>
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="canonical" href="https://vanilla-calendar.mateuszziomekit.com" />
   <script src="/scripts/index.js" type="module"></script>
-  <title>Vanilla Calendar | Responsive App with HTML, CSS & JavaScript - Mateusz Ziomek</title>
 </head>
 
 <body>
@@ -65,12 +65,13 @@
         </div>
       </div>
 
-      <button class="button button--primary button--lg" data-login-button
-        onclick="window.location.href='login.html'">Log
-        In</button>
+      <div class="sidebar__login-register-container">
+        <button class="button button--primary button--lg" data-login-button
+          onclick="window.location.href='./pages/login.html'">Log In</button>
 
-      <button class="button button--primary button--lg" data-register-button
-        onclick="window.location.href='register.html'">Register</button>
+        <button class="button button--primary button--lg" data-register-button
+          onclick="window.location.href='./pages/register.html'">Register</button>
+      </div>
     </div>
 
     <main class="main">

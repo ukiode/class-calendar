@@ -13,3 +13,17 @@
   gap: 0.5rem;
   font-weight: 500;
 }
+
+.sidebar__login-register-container {
+  margin-top: auto;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.sidebar__login-register-container button {
+  width: 100%;
+}
