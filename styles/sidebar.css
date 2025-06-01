@@ -27,3 +27,15 @@
 .sidebar__login-register-container button {
   width: 100%;
 }
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.welcome-message {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+}
