@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <link rel="stylesheet" href="/styles/register.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module">
+    import { supabase } from '/scripts/supabase.js';
+
+    const registerForm = document.querySelector('.register-form');
+    registerForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const email = document.querySelector('#email').value;
+      const password = document.querySelector('#password').value;
+
+      const { error } = await supabase.auth.signUp({ email, password });
+      if (error) {
+        alert('Registration failed: ' + error.message);
+      } else {
+        alert('Registration successful!');
+        window.location.href = '/pages/login.html'; // Redirect to the login page
+      }
+    });
+  </script>
 </head>
 
 <body class="register-page">

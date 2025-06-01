@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="/styles/login.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module">
+    import { supabase } from '/scripts/supabase.js';
+
+    const loginForm = document.querySelector('.login-form');
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const email = document.querySelector('#username').value;
+      const password = document.querySelector('#password').value;
+
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) {
+        alert('Login failed: ' + error.message);
+      } else {
+        alert('Login successful!');
+        window.location.href = '/index.html'; // Redirect to the main page
+      }
+    });
+  </script>
 </head>
 
 <body class="login-page">
